@@ -98,7 +98,6 @@ func mergeKLists(lists []*ListNode) *ListNode {
 
 	for heap.Len() > 0 {
 		node, _ := heap.PopMin()
-		fmt.Println(node)
 
 		// if there is a node following the current node
 		// put it back in the heap so we can prioritize it
@@ -106,10 +105,10 @@ func mergeKLists(lists []*ListNode) *ListNode {
 			heap.Insert(node.Next)
 		}
 
-		// only executed once
-		// we return the first node returned from the heap
-		// and we set the current for the following loop
 		if ret == nil {
+			// only executed once
+			// we return the first node returned from the heap
+			// and we set the current for the following loop
 			ret = node
 			cur = node
 		} else {
