@@ -1,0 +1,31 @@
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+Merge all the linked-lists into one sorted linked-list and return it.
+
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+merging them into one sorted list:
+1->1->2->3->4->4->5->6
+
+Input: lists = [[]]
+Output: []
+
+
+----
+
+Solution  Compare one by one and Optimize with a Priority Queue
+
+Compare every node (head of every linked list) and get the node with the smallest value.
+Extend the final sorted linked list with the selected nodes.
+
+Space complexity: 
+O(1)
+
+Time complexity: 
+O(kN) where k is the number of linked lists.
